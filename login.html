@@ -1,0 +1,131 @@
+<!doctype html>
+<title>Home</title>
+<style>
+body { 
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "nav article ads"
+    "nav footer footer";
+  grid-template-rows: 80px 1fr 70px;  
+  grid-template-columns: 20% 1fr 15%;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+  margin: 0;
+  }  
+header, footer, article, nav, div {
+  padding: 1.2em;
+  background: cyan;
+  }
+#pageHeader {
+  grid-area: header;
+  }
+#pageFooter {
+  grid-area: footer;
+  }
+#mainArticle { 
+  grid-area: article;      
+  }
+#mainNav { 
+  grid-area: nav; 
+  }
+#siteAds { 
+  grid-area: ads; 
+  } 
+/* Stack the layout on small 
+devices/viewports. */
+@media all and (max-width: 575px) {
+  body { 
+    grid-template-areas: 
+      "header"
+      "article"
+      "ads"
+      "nav"
+      "footer";
+    grid-template-rows: 80px 1fr 70px 1fr 
+70px;  
+    grid-template-columns: 1fr;
+
+}
+ #siteAds {text-align: left;
+	background: sky blue;
+	font-size: 14px;}
+
+</style>
+<body>
+  <header 
+id="pageHeader"><h1>StackOverflow-Lite</h1></header>
+  <article 
+id="mainArticle">Article</article>
+  <nav id="mainNav">Nav</nav>
+  <div id="siteAds"> <h2>Create 
+Account</h2>
+
+<form action="/action_page.php" 
+autocomplete="on">
+  First name:<input type="text" 
+name="fname"><br>
+  Last name: <input type="text" 
+name="lname"><br>
+<form action="/action_page.php">
+  <select name="gender">
+    <option value="gender">gender</option>
+    <option value="male">male</option>
+    <option value="female">female</option>
+    <option value="other">other</option>
+    <option value="secret">secret</option>
+  </select><br>
+<form action="/action_page.php">
+    D.O.B:<br>
+<input type="date" name="bday"<br><br>
+
+ E-mail: <input type="email" name="email" 
+autocomplete="off"><br>
+ Confirm Email: <input type="email" 
+name="email" autocomplete="off"><br>
+ Create password:<br>
+  <input type="password" name="psw">
+ Confirm Password:<br>
+<input type="password" name="psw">
+
+<input type="submit">
+<h2> login</h2><br
+<form action="action_page.php">
+  <div class="imgcontainer">
+    <img src="img_avatar2.png" alt="Avatar" 
+class="avatar">
+  </div>
+
+  <div class="container">
+    <label 
+for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter 
+Username" name="uname" required>
+
+    <label 
+for="psw"><b>Password</b></label>
+    <input type="password" 
+placeholder="Enter Password" name="psw" 
+required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" 
+checked="checked" name="remember"> Remember 
+me
+    </label>
+  </div>
+
+  <div class="container" 
+style="background-color:#f1f1f1">
+    <button type="button" 
+class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a 
+href="#">password?</a></span>
+  </div>
+</form>
+</form></div>
+ <footer id="pageFooter">Footer</footer>
+</body>
+
